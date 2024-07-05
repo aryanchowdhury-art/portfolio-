@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | T. Aryan Kumar Chowdhury</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1PCqFvJxRZ32b1r9xMeKHBN2CIC5Sn8Hgt6t94/WkmB+TWT/sykLZsv7J5Ycw5pTo+jqBdAzz64/GKx6eVMC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts.js" defer></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1b1b1b; /* Dark background for body */
+            color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        header nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        header nav ul li a:hover {
+            color: #e74c3c;
+        }
+        #hero {
+            position: relative;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        }
+        #hero h1, #hero p, #hero .btn {
+            position: relative;
+            z-index: 1;
+        }
+        #hero h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #fff;
+            animation: fadeIn 2s;
+        }
+        #hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #fff;
+            animation: fadeIn 2s 0.5s;
+        }
+        .btn {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+        .btn:hover {
+            background-color: #c0392b;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-10px); }
+        }
+        /* Sections */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 3em;
+            color: #e74c3c;
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideUp 1s;
+        }
+        section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #171616;
+            animation: fadeIn 1s;
+        }
+        /* Skills */
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .skills-list li {
+            background-color: #444;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 10px;
+            width: 200px;
+            list-style: none;
+            text-align: center;
+            animation: fadeIn 1s;
+        }
+        /* Certifications */
+        .certificates {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .certificates li {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 300px;
+            list-style: none;
+            text-align: left;
+            animation: fadeIn 1s;
+        }
+        .certificates li ul {
+            padding: 0;
+        }
+        .certificates li ul li {
+            margin-bottom: 5px;
+        }
+        /* Achievements */
+        .achievements-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .achievements-list li {
+            background-color: #666;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 300px;
+            list-style: none;
+            text-align: left;
+            animation: fadeIn 1s;
+        }
+        .achievements-list li p {
+            margin: 10px 0;
+        }
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #e74c3c;
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 3em;
+            }
+            section h2 {
+                font-size: 2.5em;
+            }
+        }
+        @media (max-width: 576px) {
+            #hero h1 {
+                font-size: 2.5em;
+            }
+            section h2 {
+                font-size: 2em;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            .skills-list li, .certificates li, .achievements-list li {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume/CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I am T. Aryan Kumar Chowdhury, a passionate developer specialized in AI and front-end development.</p>
+            <a href="projects.html" class="btn">See My Projects</a>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I have a strong background in developing intelligent systems and creating engaging front-end experiences. I thrive on solving complex problems and delivering innovative solutions.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Python (3.12.4)</li>
+                <li>PyTorch</li>
+                <li>TensorFlow</li>
+                <li>Scikit-learn</li>
+                <li>Pandas</li>
+                <li>NumPy</li>
+                <li>Machine Learning</li>
+                <li>Data Structures</li>
+                <li>Algorithms</li>
+                <li>Jupyter Notebooks</li>
+                <li>Git</li>
+                <li>VS Code</li>
+                <li>Data Visualization</li>
+                <li>Problem-solving</li>
+                <li>Analytical Thinking</li>
+            </ul>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul class="certificates">
+                <li>
+                    Python Development, DataCamp, April 2021
+                </li>
+                <li>
+                    Full Stack Web Developer Nanodegree, Udacity
+                    <ul>
+                        <li>Web Programming, June 2021</li>
+                        <li>C Language, December 2020</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul class="achievements-list">
+                <li>
+                    <p><strong>First Prize, Hackathon:</strong> Demonstrated problem-solving skills and innovation in a competitive environment.</p>
+                </li>
+                <li>
+                    <p><strong>Top 10, Leet Coding Competition:</strong> Applied strong algorithmic thinking and coding skills to achieve high rankings.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 T. Aryan Kumar Chowdhury. All rights reserved.</p>
+        <div>
+            <a href="https://github.com/aryanchowdhury-art" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/aryanchowdhury/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:chowdhuryaryan81@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
