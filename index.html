@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | T. Aryan Kumar Chowdhury</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1PCqFvJxRZ32b1r9xMeKHBN2CIC5Sn8Hgt6t94/WkmB+TWT/sykLZsv7J5Ycw5pTo+jqBdAzz64/GKx6eVMC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts.js" defer></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #1b1b1b; /* Dark background for body */
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #000101;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #hero {
+            position: relative;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        }
+        #hero h1, #hero p, #hero .btn {
+            position: relative;
+            z-index: 1;
+        }
+        #hero h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #fff;
+            animation: fadeIn 2s;
+        }
+        #hero p {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #fff;
+            animation: fadeIn 2s 0.5s;
+        }
+        .btn {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+        .btn:hover {
+            background-color: #c0392b;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-10px); }
+        }
+        #intro {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #333;
+        }
+        #intro h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        #intro p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .highlights {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .highlight {
+            text-align: center;
+            padding: 20px;
+        }
+        .highlight i {
+            font-size: 3em;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        #projects {
+            background-color: #444;
+            padding: 60px 20px;
+        }
+        #projects h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .project {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .project img {
+            max-width: 300px;
+            margin: 0 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project-info {
+            max-width: 600px;
+            margin: 20px;
+        }
+        .project-info h3 {
+            margin-top: 0;
+        }
+        #testimonials {
+            background-color: #555;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #testimonials h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .testimonial {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.1em;
+        }
+        .testimonial p {
+            margin: 0;
+        }
+        .testimonial cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume/CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I am T. Aryan Kumar Chowdhury, a passionate developer specialized in AI and front-end development.</p>
+            <a href="projects.html" class="btn">See My Projects</a>
+        </section>
+
+     
+
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project">
+                <img src="project1.png" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>An innovative AI chatbot built using PyTorch that enhances user engagement through advanced NLP techniques.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h3>Project Two</h3>
+                    <p>A sophisticated front-end application with dynamic data visualizations and a seamless user experience.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 T. Aryan Kumar Chowdhury</p>
+        <a href="https://www.linkedin.com/in/aryan-chowdhury" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/aryan-chowdhury" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:aryan@example.com"><i class="fas fa-envelope"></i></a>
+    </footer>
+</body>
+</html>
